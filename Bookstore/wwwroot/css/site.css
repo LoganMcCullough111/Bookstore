@@ -1,0 +1,25 @@
+/* A CSS class for markup that should be centered on the page. */
+.Centered {
+    text-align: center;
+}
+
+/* In the table, combine borders around the cells, center the table on the page. */
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* A CSS class for displaying numbers on the page. For now, just make right aligned. */
+.Number {
+    text-align: right;
+}
+
+/* Float the navigation panel to the left of the page, make its width 100 pixels. */
+nav {
+    float: left;
+    width: 100px;
+}
+
+footer {
+}

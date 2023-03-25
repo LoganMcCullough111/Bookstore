@@ -1,0 +1,27 @@
+﻿<!-- Declare the type of the data passed into this view from the action method. This data is often called the "model" for the view.
+In the C# code in the view it is referenced via the variable "Model".-->
+@model (List<Bookstore.Models.TAuthor>, List<Bookstore.Models.TBook>)
+
+<h4 class="Centered">Please choose an author</h4>
+<p class="Centered">
+    <select onchange="vRequestBooks(this)" id="selAuthors">
+        <partial name="AuthorOptions" for="@Model.Item1"></partial>
+    </select>
+</p>
+<hr />
+<table border="1">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>List Price</th>
+            <th># Copies</th>
+        </tr>
+    </thead>
+    <tbody id="tbdyBooks">
+        <!-- Pull in the partial view "BookRows.cshtml to display the rows of books. Use "fake" element, <partial>, to pull in the
+             partial view. Note that the 'name' attribute tells the name of the partial view to pull in, and the 'for' attribute
+             tells the data to pass to the partial view. -->
+        <partial name="BookRows" for="@Model.Item2"></partial>
+    </tbody>
+</table>

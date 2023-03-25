@@ -1,0 +1,8 @@
+@model List<Bookstore.Models.TAuthor>
+
+    <!-- Loop through the list of authors in the model passed in. Note that all C# code starts with an at sign, to indicate that it is
+    C# code rather than HTML markup -->
+    @foreach(var oneAuthor in Model) 
+    {
+        <option value="@oneAuthor.FAuthorId">@oneAuthor.FAuthorName</option>
+    }

@@ -1,0 +1,11 @@
+@model List<Bookstore.Models.TBook>
+
+@foreach(TBook oneBook in Model)
+{
+    <tr>
+        <td>@oneBook.FTitle</td>
+        <td>@oneBook.FIsbn</td>
+        <td class="Number">$@oneBook.RPrice</td>
+        <td class="Number">@oneBook.FNumInStock</td>
+    </tr>
+}
